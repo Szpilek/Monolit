@@ -2,27 +2,31 @@ package com.example.monolit.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import org.springframework.context.annotation.Profile;
 
 @Service
-public class FlowerServiceImpl implements FlowerService{
+@Profile("FlowerServiceImpl")
+public class FlowerServiceImpl implements FlowerService {
+
     @Autowired
-            HoneyService honeyService;
+    HoneyService honeyService;
+
     Map<Integer, String> flowers = new HashMap<>();
+
     int id = 0;
 
-    private void createFlowers(){
-        flowers.put(++id ,"Tymianek");
-        flowers.put(++id ,"Nagietek");
-        flowers.put(++id ,"Tulipan");
-        flowers.put(++id ,"Bazylia");
-        flowers.put(++id ,"Rumianek");
+    private void createFlowers() {
+        flowers.put(++id, "Tymianek");
+        flowers.put(++id, "Nagietek");
+        flowers.put(++id, "Tulipan");
+        flowers.put(++id, "Bazylia");
+        flowers.put(++id, "Rumianek");
     }
 
-    public FlowerServiceImpl(){
+    public FlowerServiceImpl() {
         createFlowers();
     }
 
@@ -33,7 +37,7 @@ public class FlowerServiceImpl implements FlowerService{
 
     @Override
     public void addFlower(String flower) {
-        flowers.put(++id ,flower);
+        flowers.put(++id, flower);
     }
 
     @Override
