@@ -5,11 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
 import org.springframework.context.annotation.Profile;
 
 @Service
-@Profile("HoneyServiceImpl")
 public class HoneyServiceImpl implements HoneyService {
 
     Map<Integer, String> flowers = new HashMap<>();

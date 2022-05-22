@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 // TODO add the profile annotation automatically ; handle @RestController's
-@Profile("FlowerController")
 public class FlowerControler {
 //    @Autowired
     FlowerService flowerService;

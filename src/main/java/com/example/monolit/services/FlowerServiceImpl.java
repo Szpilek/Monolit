@@ -8,7 +8,6 @@ import java.util.Random;
 import org.springframework.context.annotation.Profile;
 
 @Service
-@Profile("FlowerServiceImpl")
 public class FlowerServiceImpl implements FlowerService {
 
     @Autowired
