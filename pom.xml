@@ -41,6 +41,11 @@
 			<artifactId>aws-serverless-java-container-springboot2</artifactId>
 			<version>1.6</version>
 		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-lambda</artifactId>
+			<version>1.12.231</version>
+		</dependency>
 	</dependencies>
 
 	<build>

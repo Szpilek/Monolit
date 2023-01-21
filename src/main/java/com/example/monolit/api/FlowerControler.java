@@ -1,6 +1,7 @@
 package com.example.monolit.api;
 
 import com.example.monolit.services.FlowerService;
+import com.example.monolit.services.HoneyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.*;
@@ -8,8 +9,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 // TODO add the profile annotation automatically ; handle @RestController's
 public class FlowerControler {
-//    @Autowired
+    @Autowired
     FlowerService flowerService;
+    @Autowired
+    HoneyService honeyService;
     public FlowerControler(FlowerService flowerService){
         this.flowerService = flowerService;
     }
